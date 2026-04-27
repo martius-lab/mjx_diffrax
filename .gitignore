@@ -1,0 +1,8 @@
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.pyc
+.ruff_cache/
+.venv/
+test_compare.py

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mjx-diffrax"
+version = "0.1.0"
+description = "Adaptive time integration for MuJoCo MJX using diffrax"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "mujoco-mjx>=3.2.0",
+    "diffrax>=0.6.0",
+    "equinox>=0.11.0",
+    "optimistix>=0.0.6",
+    "jax>=0.4.20",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+gpu = ["jax[cuda12]"]
+
+[tool.setuptools.packages.find]
+include = ["mjx_diffrax*"]
+
+[tool.ruff]
+line-length = 100
